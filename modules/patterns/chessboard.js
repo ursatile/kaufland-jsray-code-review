@@ -15,17 +15,13 @@ export class Chessboard extends Material {
     }
 }
 
-export class Chessblock extends Material {
-    constructor(color1, color2, size = 1) 
-    {
-        super();
-        this.color1 = color1;
-        this.color2 = color2;
-        this.size = size;
+export class Chessblock extends Chessboard {
+    
+    constructor(color1, color2, size = 1) {
+        super(color1, color2, size);
     }
 
-    getColorAt = point => 
-    {
+    getColorAt = point => {
         let rank = Math.floor(point.x/this.size) % 2;
         let file = Math.floor(point.z/this.size) % 2;
         let alti = Math.floor(point.y/this.size) % 2;
