@@ -32,8 +32,8 @@ self.addEventListener('message', function (message) {
     switch (data.command) {
         case 'render':
             let renderer = new Renderer(data.width, data.height);
-            let scene = ExampleScenes.AssortedShapes();
-            let callback = makeCallback(data.block, 40);
+            let scene = ExampleScenes.ShapesOnChessboard(); // ShapesOnTiledFloor();
+            let callback = makeCallback(data.block, 20);
             renderer.render(scene, callback, data.block);
             self.close();
             self.postMessage({ command: 'finished' });
