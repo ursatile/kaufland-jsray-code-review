@@ -4,7 +4,7 @@ export class Chessboard extends Material {
     constructor(color1, color2, size = 1) {
         super();
         this.color1 = color1;
-        this.color2 = color1;
+        this.color2 = color2;
         this.size = size;
     }
     getColorAt = point => {
